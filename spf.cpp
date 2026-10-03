@@ -75,4 +75,13 @@ int main(){
             }
         }
     }
+        //to find prime factorization of a number using spf
+    // (tc is o(log base 2 of n))
+    //for ex36 gives 2. now 18 gives 2. now 9 gives 3. now 3 gives 1. 
+    // stop at 1
+    ll target; vector<ll>pf;
+    while(target>1){
+        pf.push_back(primes[target]);
+        target/=primes[target];
+    }
 }
