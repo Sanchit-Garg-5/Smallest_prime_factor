@@ -50,7 +50,7 @@ template <class... Args> void _print(priority_queue <Args...> v) {cerr << "[ "; 
 #define max_len 10000000
 int main(){
     cin.tie(nullptr); cout.tie(nullptr); ios::sync_with_stdio(false);
-    vector<int>primes(max_len+1,0);
+    vector<int>primes(max_len+1,0); // tc of the precomputation part is o(n*log(logn)) at base 2 both.
     //the nth number here is at index n+1
     //0 means non-prime
     for(int i=0;i<max_len+1;i++){
@@ -76,7 +76,7 @@ int main(){
         }
     }
         //to find prime factorization of a number using spf
-    // (tc is o(log base 2 of n))
+    // (tc of this part is is o(log base 2 of n))
     //for ex36 gives 2. now 18 gives 2. now 9 gives 3. now 3 gives 1. 
     // stop at 1
     ll target; vector<ll>pf;
