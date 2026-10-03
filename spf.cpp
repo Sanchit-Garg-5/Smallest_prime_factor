@@ -70,7 +70,7 @@ int main(){
         if(primes[i]==i){ 
             k=i; //begin marking from i*i as lesser multiples already marked
             while((ll)(k*i)<=n){
-                if(primes[k*i]!=k*i){primes[k*i]=i;}
+                if(primes[k*i]==k*i){primes[k*i]=i;}
                 k=k+2; //this ensures k is odd only
             }
         }
